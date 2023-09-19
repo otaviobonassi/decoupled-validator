@@ -1,6 +1,8 @@
 # React + TypeScript + Vite
 
-In order to test this feature, just run `npm test`. There is also a live version available at https://qventus-otavio.netlify.app/ so you can test manually.
+In order to test this feature, just run `npm test` after installing all dependencies (`npm ci`). 
+
+There is also a live version available at https://qventus-otavio.netlify.app/ so you can test it manually.
 
 ## Main scripts
 
