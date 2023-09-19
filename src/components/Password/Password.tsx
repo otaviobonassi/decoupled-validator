@@ -2,16 +2,21 @@ import { useState } from 'react';
 import { Container, Title, Wrapper } from './Password.styled'
 import { Input } from '../Input/Input.styled';
 import ListOfErrors from '../ListOfErrors/ListOfErrors';
-import { ErrorDetail, passwordSchema } from '../../services/validation';
+import { ErrorDetail, PossibleErrors, buildPasswordSchema } from '../../services/validation';
 
-export default function Password() {
+interface PasswordProps {
+  passwordReqs: PossibleErrors[]
+}
+
+export default function Password({ passwordReqs }: PasswordProps) {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState<string[]>([]);
+  const validators = buildPasswordSchema(passwordReqs);
 
   const handleValidation = (value: string):string[] => {
     if(!value) return [];
 
-    const validations = passwordSchema.validate(value, { details: true }) as ErrorDetail[];
+    const validations = validators.validate(value, { details: true }) as ErrorDetail[];
     return (validations || []).map(validation => validation?.message);
   }
 
