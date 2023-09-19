@@ -1,11 +1,19 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In order to test this feature, just run `npm test`. There is also a live version available at https://qventus-otavio.netlify.app/ so you can test manually.
 
-Currently, two official plugins are available:
+## Main scripts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+In the project directory, you can run:
+
+### `npm run dev`
+
+Runs the app in the development mode.\
+You just have to open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode *so you can check that everything is working as expected*
 
 ## Expanding the ESLint configuration
 
