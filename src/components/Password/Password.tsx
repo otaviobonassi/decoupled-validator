@@ -4,13 +4,6 @@ import { Input } from '../Input/Input.styled';
 import ListOfErrors from '../ListOfErrors/ListOfErrors';
 import { ErrorDetail, passwordSchema } from '../../services/validation';
 
-export enum PossibleErrors {
-  "specialChar",
-  "hasNumber",
-  "hasUppercase",
-  "hasNoConsecutiveLetters",
-}
-
 export default function Password() {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState<string[]>([]);
